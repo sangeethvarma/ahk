@@ -6,7 +6,7 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-#If not (WinActive("ahk_class Emacs") or WinActive("ahk_exe sioyek.exe") or WinActive("ahk_exe Zoom.exe")) ; or WinActive("ahk_exe WindowsTerminal.exe")
+#If !(WinActive("ahk_class Emacs") or WinActive("ahk_exe sioyek.exe") or WinActive("ahk_exe Zoom.exe") or WinActive("ahk_exe WindowsTerminal.exe"))
 
 ;; Enabling Ctrl, Shift to work with Alt movement
 Redirect(key) {
