@@ -17,20 +17,20 @@ Redirect(key) {
 
 #HotIf !WinActive("ahk_class Emacs") and !WinActive("ahk_exe sioyek.exe") and !WinActive("ahk_exe Zoom.exe") and !WinActive("ahk_exe WindowsTerminal.exe")
 
-; arrows
-Alt & h::Redirect("Left")
-Alt & l::Redirect("Right")
-Alt & n::Redirect("Down")
-Alt & j::Redirect("Down")
-Alt & p::Redirect("Up")
-Alt & k::Redirect("Up")
+; arrows - using ! for Alt modifier
+!h::Redirect("Left")
+!l::Redirect("Right")
+!n::Redirect("Down")
+!j::Redirect("Down")
+!p::Redirect("Up")
+!k::Redirect("Up")
 
 ; home / end
-Alt & a::Redirect("Home")
-Alt & e::Redirect("End")
+!a::Redirect("Home")
+!e::Redirect("End")
 
 ; del
-Alt & d::Redirect("Delete")
+!d::Redirect("Delete")
 
 ; Shift+Enter to click
 +Enter::Send("{Click}")
