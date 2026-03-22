@@ -2,17 +2,18 @@
 
 ; Enabling Ctrl, Shift to work with Alt movement
 Redirect(key) {
-    if GetKeyState("Shift", "P")
+    if GetKeyState("Shift", "P") {
         if GetKeyState("Ctrl", "P")
             Send("+^{" key "}")
         else
             Send("+{" key "}")
-    else if GetKeyState("Ctrl", "P")
+    } else if GetKeyState("Ctrl", "P") {
         Send("^{" key "}")
-    else if GetKeyState("LWin", "P") or GetKeyState("RWin", "P")
+    } else if GetKeyState("LWin", "P") or GetKeyState("RWin", "P") {
         Send("#{" key "}")
-    else
+    } else {
         Send("{" key "}")
+    }
 }
 
 #HotIf !WinActive("ahk_class Emacs") and !WinActive("ahk_exe sioyek.exe") and !WinActive("ahk_exe Zoom.exe") and !WinActive("ahk_exe WindowsTerminal.exe")
