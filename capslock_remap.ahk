@@ -3,12 +3,12 @@
 ; Caps Lock remapped to Left Control
 *CapsLock::
 {
-    KeyDown("LCtrl")
+    Send("{LCtrl down}")
 }
 
 *CapsLock up::
 {
-    KeyUp("LCtrl")
+    Send("{LCtrl up}")
     if A_PriorKey = "CapsLock"
     {
         Send("{Esc}")
