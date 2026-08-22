@@ -15,7 +15,7 @@ Redirect(key) {
         Send("{" key "}")
 }
 
-#HotIf !WinActive("ahk_class Emacs") and !WinActive("ahk_exe sioyek.exe") and !WinActive("ahk_exe Zoom.exe") and !WinActive("ahk_exe WindowsTerminal.exe")
+#HotIf !WinActive("ahk_class Emacs") and !WinActive("ahk_exe sioyek.exe") and !WinActive("ahk_exe Zoom.exe") and !WinActive("ahk_exe WindowsTerminal.exe") and !WinActive("ahk_exe msrdc.exe")
 
 ; arrows - using ! for Alt modifier
 !h::Redirect("Left")
